@@ -1,26 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import './index.css';
+import MainPage from "./pages/MainPage";
 
-function App() {
 
-    const [greeting, setGreeting] = useState('')
 
-    useEffect(() => {
-        fetch('/api/greeting', {
-            method: 'GET',
-            headers: {
-                'Accept': 'text/plain'
-            }
-        })
-            .then(response => response.text())
-            .then(text => setGreeting(text))
-            .catch(err => setGreeting('Da ist etwas schief gelaufen'));
-    }, []);
 
+
+export default function App() {
     return (
         <div>
-            {greeting}
+            <MainPage />
         </div>
     );
-}
+};
 
-export default App;
+
