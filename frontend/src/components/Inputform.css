@@ -1,0 +1,12 @@
+.InputForm{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    /*width: 70%;*/
+    align-items: center;
+    justify-items: center;
+
+}
+
+.inputform{
+    width: 40rem;
+}
