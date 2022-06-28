@@ -1,16 +1,19 @@
 import React from 'react';
-import './index.css';
-import MainPage from "./pages/MainPage";
-
+import KanbanPage from "./pages/KanbanPage";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import EditPage from "./pages/EditPage";
 
 
 
 
 export default function App() {
     return (
-        <div>
-            <MainPage />
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path={'/'} element={<KanbanPage/>}/>
+                <Route path={'/:id'} element={<EditPage/>}/>
+            </Routes>
+        </BrowserRouter>
     );
 };
 

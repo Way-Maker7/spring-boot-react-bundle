@@ -1,10 +1,10 @@
-import './Inputform.css';
+import './KanbanForm.css';
 import {FormEvent, useEffect, useState} from "react";
 import {KanbanStatus} from "../service/models";
 import {postNewKanban} from "../service/apiService";
 
 
-export default function Inputform(){
+export default function KanbanForm(){
 
 const [task,setTask] = useState(localStorage.getItem("task")??'')
 const [desc, setDesc] = useState(localStorage.getItem("desc")??'')
